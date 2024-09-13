@@ -1,0 +1,10 @@
+---
+services:
+  ssh-server:
+    image: lscr.io/linuxserver/openssh-server:latest
+    environment:
+      - PASSWORD_ACCESS=true
+      - USER_NAME=webhook
+      - USER_PASSWORD=webhook
+    ports:
+      - 2222:2222
